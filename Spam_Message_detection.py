@@ -10,8 +10,8 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
 #Loading the saved model
-loaded_model = pickle.load(open("C:/Users/Kiran/Desktop/Jupyter_ notebook/ML_project/Spam Message detection/trained_model.sav","rb"))
-tfidf = pickle.load(open("C:/Users/Kiran/Desktop/Jupyter_ notebook/ML_project/Spam Message detection/Vectorizer.sav", "rb"))
+loaded_model = pickle.load(open("trained_model.sav","rb"))
+tfidf = pickle.load(open("Vectorizer.sav", "rb"))
 
 #Preprocessing
 # Working with complete text like removing punctuation, stopword
