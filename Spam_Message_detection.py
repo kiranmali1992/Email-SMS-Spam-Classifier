@@ -73,11 +73,14 @@ def main():
         
         if input_text:
             if output == 1:
-                st.header("Spam")
+                #st.header("Spam")
+                st.markdown(f'<h1 style="color:##808080;font-size:20px;">{"Spam"}</h1>', unsafe_allow_html=True) 
             else:
-                st.header("Not Spam")
+                #st.header("Not Spam")
+                st.markdown(f'<h1 style="color:##808080;font-size:20px;">{"Not Spam"}</h1>', unsafe_allow_html=True) 
         else:
-            st.header("Please enter Message")
+            #st.header("Please enter Message")
+            st.markdown(f'<h1 style="color:##808080;font-size:20px;">{"Please enter Message"}</h1>', unsafe_allow_html=True) 
             
 if __name__ == "__main__":
     main()
