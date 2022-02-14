@@ -77,7 +77,7 @@ def main():
             else:
                 st.header("Not Spam")
         else:
-            st.header("Please Enter Message")
+            st.header("Please enter text")
             
 if __name__ == "__main__":
     main()
