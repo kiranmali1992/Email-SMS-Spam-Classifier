@@ -59,24 +59,24 @@ def main():
     #st.markdown(f'<h1 style="color:##808080;font-size:20px;">{"Enter your Message"}</h1>', unsafe_allow_html=True) 
 
     input_text = st.text_area("Enter your Message")
+    if input_text :
+        if st.button("Predict"):
 
-    if st.button("Predict"):
+            #1.Preprocessing
+            text = transform_text(input_text)
 
-        #1.Preprocessing
-        text = transform_text(input_text)
+            #2.Vectorizer
+            Vectorize_text = tfidf.transform([text])
 
-        #2.Vectorizer
-        Vectorize_text = tfidf.transform([text])
+            #3 Predict
+            output = loaded_model.predict(Vectorize_text)[0]
 
-        #3 Predict
-        output = loaded_model.predict(Vectorize_text)[0]
-
-        if output == 1:
-            st.header("Spam")
-        elif output == 0:
-            st.header("Not Spam")
-        else:
-            st.header(" ")
+            if output == 1:
+                st.header("Spam")
+            else output == 0:
+                st.header("Not Spam")
+    else:
+        st.header(" ")
 
 if __name__ == "__main__":
     main()
