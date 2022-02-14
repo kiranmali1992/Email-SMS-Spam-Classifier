@@ -73,8 +73,10 @@ def main():
 
         if output == 1:
             st.header("Spam")
-        else:
+        elif output == 0:
             st.header("Not Spam")
+        else:
+            st.header(" ")
 
 if __name__ == "__main__":
     main()
