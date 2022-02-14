@@ -80,7 +80,7 @@ def main():
                 st.markdown(f'<h1 style="color:	 #7EAD6E;font-size:20px;">{"Not Spam"}</h1>', unsafe_allow_html=True) 
         else:
             #st.header("Please enter Message")
-            st.markdown(f'<h1 style="color:##808080;font-size:20px;">{"Please enter Message"}</h1>', unsafe_allow_html=True) 
+            st.markdown(f'<h1 style="color:#7EAD6E;font-size:20px;">{"Please enter Message"}</h1>', unsafe_allow_html=True) 
             
 if __name__ == "__main__":
     main()
