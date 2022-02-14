@@ -70,13 +70,15 @@ def main():
 
         #3 Predict
         output = loaded_model.predict(Vectorize_text)[0]
-
-        if output == 1:
-            st.header("Spam")
-        else:
-            st.header("Not Spam")
+        
+        if input_text:
+            if output == 1:
+                st.header("Spam")
+            else:
+                st.header("Not Spam")
+         else:
+            st.header(" ")
             
-
 if __name__ == "__main__":
     main()
     
