@@ -73,7 +73,7 @@ def main():
 
             if output == 1:
                 st.header("Spam")
-            else output == 0:
+            else:
                 st.header("Not Spam")
     else:
         st.header(" ")
